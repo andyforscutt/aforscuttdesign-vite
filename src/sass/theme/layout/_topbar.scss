@@ -1,0 +1,66 @@
+@use "../base/variables";
+
+.top-bar {
+    padding: 3px;
+    text-align: left;
+    height: 34px;
+    background-color: variables.$logocharcoal;
+    color: variables.$white;
+    font-size: 1.2rem;
+    line-height: 34px;
+
+    a {
+        color: variables.$white;
+
+        &:hover,
+        &:focus {
+            color: variables.$red;
+        }
+    }
+}
+
+.social-media-header {
+    width: 100%;
+}
+
+.social-links {
+    width: 100%;
+    margin-bottom: 0;
+
+    li,
+    a {
+        color: variables.$white;
+        margin: 0 15px;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: variables.$white;
+    }
+}
+
+li.menu-item {
+    display: inline-block;
+    text-align: center;
+    float: none;
+    vertical-align: middle;
+}
+
+.social-links li {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.phoneTopBar {
+    float: right !important;
+    padding-right: 40px;
+
+    @media screen and (max-width: 768px) {
+        display: block !important;
+        margin: 0 auto !important;
+        width: 100%;
+        padding: 0;
+    }
+}

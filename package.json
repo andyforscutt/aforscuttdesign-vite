@@ -1,0 +1,43 @@
+{
+  "name": "aforscuttdesign-vite",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A Forscutt Design website",
+  "author": "Andy Forscutt",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyforscutt/aforscuttdesign-vite"
+  },
+  "scripts": {
+    "start": "node --env-file=.env node_modules/vite/bin/vite.js",
+    "dev": "node --env-file=.env node_modules/vite/bin/vite.js",
+    "build": "node build.js && node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview --mode production",
+    "sass": "node src/sass-compile.js",
+    "uglify": "node src/uglify.js",
+    "autoprefix": "postcss public/css/*.css --use autoprefixer -d public/css/",
+    "cssnano": "postcss public/css/*.css --use cssnano -d public/css/",
+    "build:css": "npm run autoprefix && npm run cssnano"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.35.0",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "eslint": "^9.35.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "fs-extra": "^11.3.1",
+    "globals": "^16.4.0",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.92.1",
+    "uglify-js": "^3.19.3",
+    "vite": "^7.1.5",
+    "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "glider-js": "^1.7.9",
+    "glightbox": "^3.3.1"
+  }
+}

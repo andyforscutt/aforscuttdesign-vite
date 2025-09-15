@@ -1,0 +1,38 @@
+@use "../base/variables";
+
+.card {
+    max-width: 512px;
+    margin: 0 auto;
+
+    @media #{variables.$bp-xl-up} {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    h3 {
+        margin: -10px 0 0 0;
+        display: block;
+        padding: 1rem;
+        background-color: variables.$silver;
+        // color: variables.$white;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$lightgrey;
+    border-radius: 0 0 4px 4px;
+    font-size: 0.89rem;
+    padding: 12px;
+    text-align: left;
+
+    .btn {
+        margin-top: auto;
+    }
+
+    @media #{variables.$bp-lg-up} {
+        min-height: 320px;
+    }
+
+}

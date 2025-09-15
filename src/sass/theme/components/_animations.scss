@@ -1,0 +1,247 @@
+//Fader
+.fader {
+    opacity: 0;
+    /* make things invisible upon start */
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.2s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+//SlideUp
+.slideUp {
+    transform: translateY(6px);
+    animation: slideUp ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+}
+
+@-webkit-keyframes slideUp {
+    from {
+        transform: translateY(6px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes slideUp {
+    from {
+        transform: translateY(6px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+//Animated Tick and Cross
+//https://codepen.io/elevaunt/pen/JYRBzJ
+svg.tick,
+svg.cross {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 40px auto 40px auto;
+
+    .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+
+    .path.circle {
+        -webkit-animation: dash 1.2s ease-in-out;
+        animation: dash 1.2s ease-in-out;
+    }
+
+    .path.line {
+        stroke-dashoffset: 1000;
+        -webkit-animation: dash 0.9s 0.9s ease-in-out forwards;
+        animation: dash 0.9s 0.9s ease-in-out forwards;
+    }
+
+    .path.check {
+        stroke-dashoffset: -100;
+        -webkit-animation: dash-check 0.6s 0.6s ease-in-out forwards;
+        animation: dash-check 0.6s 0.6s ease-in-out forwards;
+    }
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes dash-check {
+    0% {
+        stroke-dashoffset: -100;
+    }
+
+    100% {
+        stroke-dashoffset: 900;
+    }
+}
+
+@keyframes dash-check {
+    0% {
+        stroke-dashoffset: -100;
+    }
+
+    100% {
+        stroke-dashoffset: 900;
+    }
+}
+
+// animated border
+// https://codepen.io/bramus/pen/rNWByYz
+.animated-border {
+    --angle: 0deg;
+    width: 100%;
+    height: auto;
+    border: 3px solid;
+    border-image: conic-gradient(from var(--angle), #743ad5, magenta, #d53a9d, #743ad5) 1;
+
+    animation: 3s rotate linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+// Ellipsis 
+.lds-ellipsis,
+.lds-ellipsis span {
+    box-sizing: border-box;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 0px;
+    height: 0px;
+}
+
+.lds-ellipsis span {
+    position: absolute;
+    bottom: 2.5px;
+    width: 5.33333px;
+    height: 5.33333px;
+    border-radius: 50%;
+    background: currentColor;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis span:nth-child(1) {
+    left: 4px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis span:nth-child(2) {
+    left: 4px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis span:nth-child(3) {
+    left: 16px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis span:nth-child(4) {
+    left: 28px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(12px, 0);
+    }
+}

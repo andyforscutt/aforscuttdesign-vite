@@ -1,0 +1,102 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+form {
+    background-color: variables.$lightgrey;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 80px;
+    border-top: 6px solid variables.$logored;
+    font-size: .941rem;
+
+    h2,
+    h3,
+    p {
+        margin: 0 0 6px 0;
+    }
+
+    button {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+}
+
+fieldset {
+    padding: 0;
+    border: none;
+}
+
+legend {
+    font-weight: 600;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    height: 50px;
+}
+
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+input[type=date],
+input[type=email],
+input[type=text],
+input[type=time],
+select,
+textarea {
+    padding: 12px;
+    width: 100%;
+    border: 3px solid variables.$silver;
+    border-radius: 2px;
+    transition: border .6s;
+    @include mixins.appearance-none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+textarea {
+    height: auto;
+    overflow: auto;
+}
+
+.contact-section {
+    margin-bottom: 20px;
+}
+
+.red {
+    color: variables.$logored;
+}
+
+.error-list {
+    margin-bottom: 15px;
+}
+
+.input-error {
+    border: 2px solid variables.$logored !important;
+}
+
+@media screen and (min-width: 992px) {
+    form {
+        width: 500px;
+    }
+}

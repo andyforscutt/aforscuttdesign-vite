@@ -1,0 +1,36 @@
+@use "../base/variables";
+
+svg.icon-phone {
+    fill: variables.$white;
+}
+
+.social-icons {
+    margin-top: 6px;
+}
+
+@media screen and (min-width:576px) {
+    .social-icons {
+        border-top: 2px solid variables.$lightgrey;
+    }
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    border: variables.$red !important;
+    transition: none !important
+}
+
+.social-icons a:focus {
+    outline: 2px solid variables.$black;
+}
+
+.social-icons a svg {
+    fill: variables.$lightgrey
+}
+
+.social-icons a:focus svg,
+.social-icons a:hover svg {
+    fill: variables.$white
+}

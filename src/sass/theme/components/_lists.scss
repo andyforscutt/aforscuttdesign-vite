@@ -1,0 +1,67 @@
+@use "../base/variables";
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.inside {
+    list-style: inside;
+}
+
+ul.check>li::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5em;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23303030' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5.299 1.399-1.43 3.574 3.736 6.572-7.007 1.455 1.403-8 8.597z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+ul.custom-bullet>li:before {
+    content: "";
+    height: 24px;
+    width: 24px;
+    display: block;
+    float: left;
+    margin: 3px 15px 20px 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+@media screen and (min-width:820px) {
+    ul.custom-bullet>li:before {
+        margin: 3px 15px 20px -1.5em;
+    }
+}
+
+.features {
+    // background-color: variables.$silver;
+    // border-top: 6px solid variables.$red;
+    font-weight: 600;
+}
+
+.features li {
+    clear: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+@media screen and (min-width:820px) {
+    .features li {
+        font-size: 1rem;
+        padding-left: 30px;
+    }
+}
+
+.features li:last-child {
+    margin-bottom: 0
+}

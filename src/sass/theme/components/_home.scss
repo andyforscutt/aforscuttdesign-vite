@@ -1,0 +1,19 @@
+@use "../base/variables";
+
+.home-contact {
+    background-color: variables.$lightgrey;
+    border-top: 6px solid variables.$silver;
+    padding-bottom: 30px;
+    margin-bottom: 0
+}
+
+#areas {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#checkatrade {
+    height: 150px;
+}

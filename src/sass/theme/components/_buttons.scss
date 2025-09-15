@@ -1,0 +1,65 @@
+@use "../base/variables";
+
+button,
+.btn {
+    border: 3px solid variables.$silver;
+    border-radius: 50px;
+    max-width: 100%;
+    display: inline-block;
+    color: variables.$darkgrey;
+    font-weight: 600;
+    padding: 18px 36px;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+.btn {
+    min-width: 100px;
+}
+
+.btn-primary,
+.btn-primary:visited,
+.btn-primary:active {
+    color: variables.$darkgrey;
+    background-color: transparent;
+    transition: background-color 0.4s, border 0.4s;
+
+    svg {
+        margin-left: 12px;
+        transition: margin-left 0.4s;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: variables.$white;
+        border: 3px solid variables.$white;
+        color: variables.$darkgrey;
+        // outline: 2px solid variables.$black;
+
+        svg {
+            margin-left: 24px;
+        }
+    }
+}
+
+.btn-default,
+.btn-default:visited,
+.btn-default:active {
+    background-color: variables.$darkgrey;
+    color: variables.$white;
+    transition: background-color 0.8s;
+
+    &:focus {
+        outline: 2px solid variables.$black;
+    }
+
+    &:hover {
+        color: variables.$darkgrey;
+        background-color: variables.$white;
+        border: 3px solid variables.$white;
+    }
+}

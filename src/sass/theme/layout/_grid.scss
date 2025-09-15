@@ -1,0 +1,57 @@
+@use "../base/variables";
+
+// GRID
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+div[class^="col-"] {
+    grid-column: span 12;
+}
+
+// Small
+@media #{variables.$bp-sm-up} {
+    div.col-sm-4 {
+        grid-column: span 4;
+    }
+
+    div.col-sm-6 {
+        grid-column: span 6;
+    }
+
+    div.col-sm-8 {
+        grid-column: span 8;
+    }
+}
+
+// Medium
+@media #{variables.$bp-md-up} {
+    div.col-md-4 {
+        grid-column: span 4;
+    }
+
+    div.col-md-6 {
+        grid-column: span 6;
+    }
+
+    div.col-md-8 {
+        grid-column: span 8;
+    }
+}
+
+// Large
+@media #{variables.$bp-lg-up} {
+    div.col-lg-4 {
+        grid-column: span 4;
+    }
+
+    div.col-lg-6 {
+        grid-column: span 6;
+    }
+
+    div.col-lg-8 {
+        grid-column: span 8;
+    }
+}

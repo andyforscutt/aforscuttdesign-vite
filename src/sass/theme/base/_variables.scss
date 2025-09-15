@@ -1,0 +1,44 @@
+// Color Variables
+$white: #fff;
+$black: #191919;
+$silver: #e0e0e0;
+$lightgrey: #f5f5f5;
+$darkgrey: #373737;
+
+$logored: #bd2528; // #B12127; // #d22026;
+$logocharcoal: #303030;
+$logogrey: #656565;
+
+$red: #C40000;
+$lightred: #ff0000;
+
+// Fonts
+$font-name: "Inter";
+$font-file: "Inter-Regular";
+$font-path: "/fonts/";
+
+$font-h-name: "Satoshi";
+$font-h-file: "Satoshi-Regular";
+
+// Font Stacks
+$stack-sans-serif: Arial, sans-serif;
+$stack-body: $font-name, $stack-sans-serif;
+$stack-h: $font-h-name, $stack-sans-serif;
+
+// Media Query Break Points
+$bp-xxl-up: "screen and (min-width:1600px)";
+$bp-xl-up: "screen and (min-width:1400px)";
+
+$bp-lg-up: "screen and (min-width:992px)";
+$bp-lg: "screen and (max-width:992px)";
+
+$bp-md-up: "screen and (min-width:820px)";
+$bp-md: "(max-width:820px)";
+
+$bp-sm-up: "screen and (min-width:576px)";
+$bp-sm: "(max-width:576px)";
+
+$bp-xs: "(max-width:600px)";
+$bp-xxs: "(max-width:360px)";
+
+// @media #{variables.$bp-md} {

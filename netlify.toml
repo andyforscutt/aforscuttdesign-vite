@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+for = "/*"
+[headers.values]
+  X-Frame-Options = "DENY"
+  X-XSS-Protection = "1; mode=block"
+  Referrer-Policy = "no-referrer"
+  X-Content-Type-Options = "nosniff"
+  Content-Security-Policy = """
+    default-src 'self';
+    img-src 'self' data: https://aforscuttdesign.imgix.net https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
+    font-src 'self' data: https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
+    script-src 'self';
+    style-src 'self' 'unsafe-inline';
+  """
+  Cache-Control = "max-age=31536000, immutable"
+
+# Optional SPA fallback
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+force = false
+conditions = { exists = false }

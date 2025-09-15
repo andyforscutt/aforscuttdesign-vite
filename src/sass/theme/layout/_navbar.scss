@@ -1,0 +1,240 @@
+@use "../base/variables";
+
+nav {
+    width: 100%;
+    box-shadow: 2px 3px 5px 0px rgba(224, 224, 224, 0.75); // $silver: #e0e0e0;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(224, 224, 224, 0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(224, 224, 224, 0.75);
+
+    @media screen and (max-width:820px) {
+        height: 200px;
+    }
+}
+
+.nav-container {
+    justify-content: space-evenly
+}
+
+
+@media screen and (max-width: 1200px) {
+    #homeNav {
+        display: none;
+    }
+}
+
+.logoTitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: variables.$black;
+    margin: -12px 12px 0 12px;
+
+    @media screen and (max-width:820px) {
+        font-size: 1.25rem;
+    }
+}
+
+.logo {
+    flex-grow: 2;
+    align-self: flex-start;
+    // width: 200px;
+    // height: 102px;
+    margin: 0.5rem auto 1rem auto;
+
+    @media screen and (min-width:820px) {
+        margin-left: -30px;
+    }
+}
+
+.logo a,
+.logo a:active,
+.logo a:focus,
+.logo a:hover {
+    border: none;
+}
+
+.nav-menu {
+    transition: transform .5s, opacity .4s
+}
+
+@media (max-width:820px) {
+    .nav-menu {
+        width: 100%;
+    }
+}
+
+.nav-menu a {
+    color: variables.$logored;
+    border-bottom: 2px solid transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: color .2s;
+}
+
+.nav-menu a:focus,
+.nav-menu a:hover {
+    color: variables.$red;
+    border-bottom: 2px solid variables.$red;
+    text-decoration: none;
+}
+
+@media screen and (min-width:1400px) {
+    .nav-menu a {
+        font-size: 1.44rem
+    }
+}
+
+.nav-menu .active {
+    color: variables.$red;
+    border-bottom: 2px solid variables.$red;
+}
+
+div.closed {
+    padding-left: 30px
+}
+
+div.closed .cancel {
+    display: none
+}
+
+@media (max-width:820px) {
+    div.closed {
+        opacity: 0;
+        padding: 30px 0;
+        transform: translateX(-1000px)
+    }
+
+    div.closed,
+    div.open {
+        background-color: variables.$silver;
+    }
+
+    div.open {
+        opacity: 1;
+        padding: 70px 0 30px;
+        transform: translateX(0);
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100
+    }
+
+    div.open a {
+        // color: variables.$white;
+        font-size: 2.2em;
+        padding-bottom: 2px
+    }
+
+    div.open .cancel {
+        position: absolute;
+        color: variables.$red;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        top: 20px;
+        right: 5px
+    }
+}
+
+.nav-menu li {
+    display: inline-block
+}
+
+.nav-menu li a {
+    display: inline-block
+}
+
+@media (max-width:820px) {
+    .nav-menu li {
+        display: block;
+        text-align: center
+    }
+}
+
+@media screen and (min-width:820px) {
+    li {
+        margin-right: 20px
+    }
+}
+
+@media screen and (min-width:992px) {
+    li {
+        margin-right: 50px
+    }
+}
+
+.drawer-toggle {
+    background-color: variables.$red;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    justify-self: end;
+    height: 40px;
+    padding: 5px 12px;
+    color: variables.$white;
+    // width: 40px;
+    transition: opacity .2s;
+    z-index: 999
+}
+
+.drawer-toggle:focus,
+.drawer-toggle:hover {
+    outline: 0
+}
+
+.drawer-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: variables.$white
+}
+
+.drawer-toggle .bar:last-child {
+    margin-bottom: 0 !important
+}
+
+@media screen and (min-width:820px) {
+    .drawer-toggle {
+        display: none
+    }
+}
+
+button.open {
+    opacity: 0;
+    z-index: 1
+}
+
+.dropdown-menu {
+    display: none;
+    background: variables.$lightgrey;
+}
+
+.dropdown-menu.open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    padding: 0.5rem 1rem;
+    z-index: 99;
+
+    @media #{variables.$bp-md} {
+        width: 100%;
+    }
+
+    @media screen and (min-width:820px) and (max-width:1399px) {
+        margin-left: -35px;
+    }
+
+    @media screen and (min-width:1400px) {
+        margin-left: -45px;
+    }
+
+    li {
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+}

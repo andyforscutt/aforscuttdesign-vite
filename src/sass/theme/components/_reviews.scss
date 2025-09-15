@@ -1,0 +1,22 @@
+@use "../base/variables";
+
+blockquote {
+    text-align: left;
+    font-size: 0.89rem;
+    color: variables.$darkgrey;
+    padding: 0;
+    margin: 0;
+}
+
+.reviewer {
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.stars {
+    img {
+        width: 72px;
+        height: 12px;
+    }
+}

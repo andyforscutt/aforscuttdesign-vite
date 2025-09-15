@@ -1,0 +1,88 @@
+@use "./variables";
+
+$font-url: variables.$font-path + variables.$font-file;
+
+@font-face {
+    font-family: variables.$font-name;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Inter Regular"),
+    local(variables.$font-file),
+    url(#{$font-url}.woff2) format("woff2"),
+    url(#{$font-url}.woff) format("woff"),
+    url(#{$font-url}.ttf) format("ttf");
+}
+
+.hidden {
+    display: none;
+}
+
+body,
+html {
+    height: 100%;
+    color: variables.$black;
+    font-family: variables.$font-name, sans-serif;
+    line-height: 1.75;
+    font-size: 17px;
+
+    @media #{variables.$bp-lg-up} {
+        font-size: 18px;
+    }
+}
+
+p {
+    margin: 5px 0 1rem 0;
+}
+
+form,
+img,
+input,
+select,
+textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto
+}
+
+a,
+a:active,
+a:visited {
+    color: variables.$red;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus {
+        color: variables.$lightred;
+        // border-bottom: 1px solid variables.$lightred;
+    }
+}
+
+span.sr-only {
+    position: absolute;
+    left: -1000px;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.bg-1 {
+    background-color: variables.$lightgrey;
+}
+
+.bg-2 {
+    background-color: variables.$silver;
+}
+
+.bg-3 {
+    background-color: variables.$black;
+}
+
+.bg-4 {
+    background-color: variables.$white;
+}
