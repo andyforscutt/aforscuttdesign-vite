@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
   const defaultImage = "about.jpg";
   const phone = env.VITE_PHONE;
   const imgBaseUrl = env.VITE_IMG_BASE_URL || "http://localhost:5173/images";
-  let excludeSearch = env.VITE_SEARCH_ENGINES_EXCLUDE === "1";
+  const excludeSearch = env.VITE_SEARCH_ENGINES_EXCLUDE === "1";
 
   return {
     root: path.resolve(__dirname, "pages"), // Your entry HTML files live here
