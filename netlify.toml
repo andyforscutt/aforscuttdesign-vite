@@ -14,7 +14,7 @@ for = "/*"
     img-src 'self' data: https://aforscuttdesign.imgix.net https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
     font-src 'self' data: https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
     script-src 'self' data: https://aforscutt.co.uk https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com;
-    style-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' data: https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com;
   """
   Cache-Control = "max-age=31536000, immutable"
 
