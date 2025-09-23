@@ -12,7 +12,7 @@ for = "/*"
   Content-Security-Policy = """
     default-src 'self';
     img-src 'self' data: https://aforscuttdesign.imgix.net https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
-    font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
+    font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com https://maxcdn.bootstrapcdn.com https://aforscutt.co.uk https://aforscuttdesign.netlify.app;
     script-src 'self' data: https://aforscutt.co.uk https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com;
     style-src 'self' 'unsafe-inline' data: https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com;
   """
