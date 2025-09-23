@@ -35,7 +35,6 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script>$.scrollTo = $.fn.scrollTo = function (x, y, options) { if (!(this instanceof $)) return $.fn.scrollTo.apply($('html, body'), arguments); options = $.extend({}, { gap: { x: 0, y: 0 }, animation: { easing: 'swing', duration: 800, complete: $.noop, step: $.noop } }, options); return this.each(function () { var elem = $(this); elem.stop().animate({ scrollLeft: !isNaN(Number(x)) ? x : $(y).offset().left + options.gap.x, scrollTop: !isNaN(Number(y)) ? y : $(y).offset().top + options.gap.y }, options.animation); }); };</script>
 <script src="/js/waypoints.min.js"></script>
 <script src="/js/jquery.masonry.min.js"></script>
 <script src="/js/jquery.flexslider.min.js"></script>
