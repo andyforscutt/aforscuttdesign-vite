@@ -18,7 +18,8 @@
     "uglify": "node src/uglify.js",
     "autoprefix": "postcss public/css/*.css --use autoprefixer -d public/css/",
     "cssnano": "postcss public/css/*.css --use cssnano -d public/css/",
-    "build:css": "npm run autoprefix && npm run cssnano"
+    "build:css": "npm run autoprefix && npm run cssnano",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.6",
@@ -26,6 +27,7 @@
     "autoprefixer": "^10.5.4",
     "cssnano": "^8.0.2",
     "eslint": "^10.8.0",
+    "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-unicorn": "^72.0.0",
     "fs-extra": "^11.4.0",
     "globals": "^17.8.0",
@@ -36,7 +38,6 @@
     "vite-plugin-handlebars": "^2.0.3"
   },
   "dependencies": {
-    "eslint-plugin-import-x": "^4.17.1",
     "glider-js": "^1.7.10",
     "glightbox": "^3.3.1"
   },
