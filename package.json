@@ -5,6 +5,9 @@
   "description": "A Forscutt Design website",
   "author": "Andy Forscutt",
   "private": true,
+  "engines": {
+    "node": "24.14.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/andyforscutt/aforscuttdesign-vite"
