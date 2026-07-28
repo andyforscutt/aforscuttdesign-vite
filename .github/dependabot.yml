@@ -1,0 +1,68 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+
+    open-pull-requests-limit: 5
+
+    commit-message:
+      prefix: "deps"
+
+    labels:
+      - "dependencies"
+
+    groups:
+      production-dependencies:
+        dependency-type: production
+        update-types:
+          - "minor"
+          - "patch"
+
+      development-dependencies:
+        dependency-type: development
+        update-types:
+          - "minor"
+          - "patch"
+
+      major-updates:
+        update-types:
+          - "major"
+
+    ignore:
+      # Build tooling - review major upgrades manually
+      - dependency-name: "vite"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "eslint"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "@eslint/js"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "@eslint/eslintrc"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "sass"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "postcss-cli"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "autoprefixer"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "cssnano"
+        update-types:
+          - "version-update:semver-major"
