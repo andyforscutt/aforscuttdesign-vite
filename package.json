@@ -21,23 +21,27 @@
     "build:css": "npm run autoprefix && npm run cssnano"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.36.0",
-    "autoprefixer": "^10.5.0",
-    "cssnano": "^8.0.1",
-    "eslint": "^9.39.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-unicorn": "^61.0.2",
-    "fs-extra": "^11.3.5",
-    "globals": "^17.6.0",
+    "@eslint/eslintrc": "^3.3.6",
+    "@eslint/js": "^10.0.1",
+    "autoprefixer": "^10.5.4",
+    "cssnano": "^8.0.2",
+    "eslint": "^10.8.0",
+    "eslint-plugin-unicorn": "^72.0.0",
+    "fs-extra": "^11.4.0",
+    "globals": "^17.8.0",
     "postcss-cli": "^11.0.1",
-    "sass": "^1.100.0",
+    "sass": "^1.102.0",
     "uglify-js": "^3.19.3",
-    "vite": "^8.0.14",
+    "vite": "^8.1.5",
     "vite-plugin-handlebars": "^2.0.3"
   },
   "dependencies": {
+    "eslint-plugin-import-x": "^4.17.1",
     "glider-js": "^1.7.10",
     "glightbox": "^3.3.1"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.1": true,
+    "unrs-resolver@1.12.2": true
   }
 }

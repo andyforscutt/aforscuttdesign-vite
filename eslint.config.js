@@ -5,11 +5,11 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 
 // Dynamically import CommonJS plugins (security temporarily disabled until it's compatible with ESM)
-const importPlugin = await import("eslint-plugin-import").then(
-  (mod) => mod.default || mod
+const importPlugin = await import("eslint-plugin-import-x").then(
+  (mod) => mod.default || mod,
 );
 const unicorn = await import("eslint-plugin-unicorn").then(
-  (mod) => mod.default || mod
+  (mod) => mod.default || mod,
 );
 // const security = await import("eslint-plugin-security-node").then((mod) => mod.default || mod);
 
@@ -22,6 +22,10 @@ const compat = new FlatCompat({
 
 export default [
   // Use export default
+  {
+    ignores: ["node_modules/", ".next/", "out/", "dist/", "build/", "public/"],
+  },
+
   ...compat.extends("eslint:recommended"),
   // ...compat.extends("plugin:security-node/recommended"),
   {
